@@ -1,0 +1,6 @@
+.Navigation-nav {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
