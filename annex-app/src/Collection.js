@@ -6,20 +6,21 @@ function Collection() {
 
     useEffect(() => {
         const collectionApiCall = async () => {
-            const data = await axios("https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201/recZ1K7BKQ418pjrx", {
+            const data = await axios("https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201/", {
                 headers: {
                     'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
                 }
             })
-            console.log(data.data.fields)
-            for (const input in data.data.fields) { // Turn from object into an array
-                let collectionInfoArray = []
-                collectionInfoArray.push(`${input}: ${data.data.fields[input]}`)
-                updateCollection(collectionInfoArray)
-            }
+            // console.log(data.data.records)
+            // let collectionInfoArray = []
+            // for (const input in data.data.fields) { // Turn from object into an array
+            //     collectionInfoArray.push(`${input}: ${data.data.fields[input]}`)
+            // }
+            updateCollection(data.data.records)
         }
         collectionApiCall()
     }, [])
+    // console.log(collections)
     return (
         // Create container with designated height/width
         // Create border
@@ -32,9 +33,9 @@ function Collection() {
         <h1>Top Collections</h1>
             {collections.map(collection => 
                 <div>
-                    <img src={collection.FeaturedImage}></img>
-                    <h2>{collection.CollectionName}</h2>
-                    <h2>{collection.Username}</h2>
+                    <img src={collection.fields.FeaturedImage} alt="Banner"></img>
+                    <h2>{collection.fields.CollectionName}</h2>
+                    <h2>{collection.fields.Username}</h2>
                     <button>See More</button>
                 </div>)}
         <button>See More</button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 function CreateUser() {
@@ -26,17 +26,19 @@ function CreateUser() {
     return (
         <div>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" onChange={e => updateName(e.target.value)} />
+            <input type="text" id="name" placeholder="Name" onChange={e => updateName(e.target.value)} />
             <label htmlFor="location">Location</label>
-            <input type="text" id="location" onChange={e => updateLocation(e.target.value)} />
+            <input type="text" id="location" placeholder="Location" onChange={e => updateLocation(e.target.value)} />
             <label htmlFor="bio">Bio</label>
-            <input type="text" id="name" onChange={e => updateBio(e.target.value)} />
+            <input type="text" id="name" placeholder="Bio" onChange={e => updateBio(e.target.value)} />
             <label for="url">Enter Image URL</label>
-            <input type="url" name="url" id="first-url" onChange={e => updateFirstPic(e.target.value)} />
+            <input type="url" name="url" id="profile-pic" placeholder="Profile Pic" onChange={e => updateProfilePic(e.target.value)} />
             <label for="url">Enter Image URL</label>
-            <input type="url" name="url" id="first-url" onChange={e => updateSecondPic(e.target.value)} />
+            <input type="url" name="url" id="first-url" placeholder="Collection Image #1" onChange={e => updateFirstPic(e.target.value)} />
             <label for="url">Enter Image URL</label>
-            <input type="url" name="url" id="first-url" onChange={e => updateThirdPic(e.target.value)} />
+            <input type="url" name="url" id="first-url" placeholder="Collection Image #2" onChange={e => updateSecondPic(e.target.value)} />
+            <label for="url">Enter Image URL</label>
+            <input type="url" name="url" id="first-url" placeholder="Collection Image #3" onChange={e => updateThirdPic(e.target.value)} />
             <label for="url">Enter Image URL</label>
             <button onClick={() => createUser(profilePic, name, location, bio, firstPic, secondPic, thirdPic)}>Create New Profile</button>
         </div>
