@@ -3,6 +3,7 @@ import axios from 'axios'
 
 function FeatureCollection() {
     const [featureCollection, updateFeatureCollection] = useState([])
+    const [imageIndex, updateImageIndex] = useState(0)
 
     useEffect(() => {
         const featureApiCall = async () => {
@@ -18,20 +19,26 @@ function FeatureCollection() {
                 
             // }
             updateFeatureCollection(data.data.records)
+            setInterval(() => {
+                if(imageIndex + 1 === featureCollection.length) {
+                    updateImageIndex(0)
+                } else {
+                    updateImageIndex(imageIndex + 1)
+                }
+            }, 3000)
         }
         featureApiCall()
     }, [])
-console.log(featureCollection)
+// console.log(featureCollection)
     return (
         // Display feature collection
         // Display 'See More' Button
         // Add onClick event to Feature Collection Show Page
         <>
         <h1>Feature Collection</h1>
-            {featureCollection.map(collection => 
                 <div>
-                    <img src={collection.fields.FeaturedImage} alt="Top Collections"></img>
-                </div>)}
+                    {featureCollection.length > 0 && <img src={featureCollection[imageIndex].fields.FeaturedImage} alt="Top Collections"></img>}
+                </div>
         <button>See More</button>
         </>
     )

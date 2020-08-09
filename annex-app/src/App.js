@@ -1,9 +1,8 @@
 import React from 'react';
+import { Route, Link } from 'react-router-dom'
 import './App.css';
 import Navigation from './Navigation';
-import FeatureCollection from './FeatureCollection';
-import Collection from './Collection';
-import User from './User'
+import Home from './Home';
 import ShowCollection from './ShowCollection'
 import ShowUser from './ShowUser';
 import CreateUser from './CreateUser';
@@ -14,15 +13,26 @@ function App() {
     <>
     <Navigation />
 
-    <FeatureCollection />
+    <Route path="/">
+        <Home />
+    </Route>
 
-    <Collection />
-    <ShowCollection />
-    <CreateCollection />
+    <Route path="/show-collection/">
+        <ShowCollection />
+    </Route>
+    
+    <Route path="/create-collection/">
+        <CreateCollection />
+    </Route>
 
-    <User />
-    <ShowUser />
-    <CreateUser />
+    <Route path="/show-user/">
+        <ShowUser />
+    </Route>
+    
+    <Route path="/create-user/">
+        <CreateUser />
+    </Route>
+    
     </>
     
   )

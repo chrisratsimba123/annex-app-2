@@ -33,7 +33,6 @@ useEffect(() => {
                 <div>
                     <img src={user.fields.Artwork1} alt="Profile-Pic"></img>
                     <h2>{user.fields.Name}</h2>
-                    <button>See More</button>
                 </div>)}
         </>
     )

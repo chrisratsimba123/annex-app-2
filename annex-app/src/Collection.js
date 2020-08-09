@@ -34,11 +34,8 @@ function Collection() {
             {collections.map(collection => 
                 <div>
                     <img src={collection.fields.FeaturedImage} alt="Banner"></img>
-                    <h2>{collection.fields.CollectionName}</h2>
-                    <h2>{collection.fields.Username}</h2>
-                    <button>See More</button>
+                    <h2>{collection.fields.CollectionName} ({collection.fields.Username})</h2>
                 </div>)}
-        <button>See More</button>
         </>
     )
 }

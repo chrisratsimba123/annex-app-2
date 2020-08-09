@@ -13,7 +13,7 @@ function ShowCollection() {
                     'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
                 }
             })
-            console.log(data.data.records)
+            // console.log(data.data.records)
             // let showCollectionInfoArray = []
             // for (const input in data.data.fields) { // Turn from object into an array
             //     showCollectionInfoArray.push(`${input}: ${data.data.fields[input]}`)
@@ -25,7 +25,7 @@ function ShowCollection() {
 // console.log(collections)
     return (
         <>
-        <h1>Show Collections</h1>
+        <h1>Collections</h1>
             {collections.map(collection => 
                 <div>
                     <h2>{collection.fields.CollectionName}</h2>
