@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link, useParams, useHistory } from 'react-router-dom'
+
 
 function Collection() {
     const [collections, updateCollection] = useState([])
+    const params = useParams()
+    const history = useHistory()
 
     useEffect(() => {
         const collectionApiCall = async () => {
@@ -34,7 +38,7 @@ function Collection() {
             {collections.map(collection => 
                 <div>
                     <img src={collection.fields.FeaturedImage} alt="Banner"></img>
-                    <h2>{collection.fields.CollectionName} ({collection.fields.Username})</h2>
+                    <Link to={`/show-collection/${collection.id}`}>{collection.fields.CollectionName} ({collection.fields.Username})</Link>
                 </div>)}
         </>
     )

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
 
 function CreateCollection() {
@@ -12,10 +12,10 @@ function CreateCollection() {
     const [fifthPic, updateFifthPic] = useState("")
     const [sixthPic, updateSixthPic] = useState("")
 
-    const createCollection = async (username, collectionName, caption, firstPic, secondPic, thirdPic, fourthPic, fifthPic, sixthPic) => {
+    const createCollection = async () => {
         await axios.post("https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201", {
             fields: {
-                username, collectionName, caption, firstPic, secondPic, thirdPic, fourthPic, fifthPic, sixthPic
+                Username: username, CollectionName: collectionName, Caption: caption, Artwork1: firstPic, Artwork2: secondPic, Artwork3: thirdPic, Artwork4: fourthPic, Artwork5: fifthPic, Artwork6: sixthPic
             }
         }, {
             headers: {

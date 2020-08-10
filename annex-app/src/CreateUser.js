@@ -10,10 +10,10 @@ function CreateUser() {
     const [secondPic, updateSecondPic] = useState("")
     const [thirdPic, updateThirdPic] = useState("")
 
-    const createUser = async (profilePic, name, location, bio, firstPic, secondPic, thirdPic) => {
+    const createUser = async () => {
         await axios.post("https://api.airtable.com/v0/appdkkBZ0LmjsMTXi/Table%201", {
             fields: {
-                profilePic, name, location, bio, firstPic, secondPic, thirdPic
+                MediumProPic: profilePic, Name: name, Location: location, Bio: bio, Artwork1: firstPic, Artwork2: secondPic, Artwork3: thirdPic
             }
         }, {
             headers: {

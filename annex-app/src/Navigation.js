@@ -1,13 +1,13 @@
 import './Navigation.css'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Navigation() {
     return (
         <nav>
-            <a href="">Annex</a>
-            <a href="">Search</a>
-            <a href="">Post</a>
-            <a href="">Sign Up</a>
+            <Link to="/">Annex</Link>
+            <Link to="/create-collection/">Submit a Collection</Link>
+            <Link to="/create-user/">Sign Up</Link>
         </nav>
     )
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Route, Link } from 'react-router-dom'
 import axios from 'axios'
 
 function User() {
@@ -32,7 +33,8 @@ useEffect(() => {
             {users.map(user => 
                 <div>
                     <img src={user.fields.Artwork1} alt="Profile-Pic"></img>
-                    <h2>{user.fields.Name}</h2>
+                    <Link to={`/show-user/${user.id}`}>{user.fields.Name}</Link>
+                    
                 </div>)}
         </>
     )
