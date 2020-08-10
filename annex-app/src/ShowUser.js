@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 function ShowUser() {
@@ -23,16 +23,14 @@ function ShowUser() {
 
   return (
     <>
-      <h1>Show Users</h1>
       {user && (
-        <div>
-          <img src={user.MediumProPic} alt="Medium Sized Profile Pic"></img>
-          <h2>{user.Name}</h2>
-          <h2>{user.Location}</h2>
-          <img src={user.Artwork1} alt="Artwork 1"></img>
-          <img src={user.Artwork2} alt="Artwork 2"></img>
-          <img src={user.Artwork3} alt="Artwork 3"></img>
-          <button onClick={`location.href = ${user.Collection}`}>See More</button>
+        <div className="show-users-div">
+          <h1>{user.fields.Name}</h1>
+          <img src={user.fields.MediumProPic} alt="Medium Sized Profile Pic"></img>
+          <h2>{user.fields.Location}</h2>
+          <img className="show-users-images" src={user.fields.Artwork1} alt="Artwork 1"></img>
+          <img className="show-users-images" src={user.fields.Artwork2} alt="Artwork 2"></img>
+          <img className="show-users-images" src={user.fields.Artwork3} alt="Artwork 3"></img>
         </div>
       )}
     </>

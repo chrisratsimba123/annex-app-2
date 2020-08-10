@@ -1,47 +1,39 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios'
-import { Link, useParams, useHistory } from 'react-router-dom'
-
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { Link, useParams, useHistory } from "react-router-dom";
 
 function Collection() {
-    const [collections, updateCollection] = useState([])
-    const params = useParams()
-    const history = useHistory()
+  const [collections, updateCollection] = useState([]);
 
-    useEffect(() => {
-        const collectionApiCall = async () => {
-            const data = await axios("https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201/", {
-                headers: {
-                    'Authorization': `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`
-                }
-            })
-            // console.log(data.data.records)
-            // let collectionInfoArray = []
-            // for (const input in data.data.fields) { // Turn from object into an array
-            //     collectionInfoArray.push(`${input}: ${data.data.fields[input]}`)
-            // }
-            updateCollection(data.data.records)
+  useEffect(() => {
+    const collectionApiCall = async () => {
+      const data = await axios(
+        "https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201/",
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
+          },
         }
-        collectionApiCall()
-    }, [])
-    // console.log(collections)
-    return (
-        // Create container with designated height/width
-        // Create border
-        // Add thumbnail of artwork (Unsplash API)
-        // Add title of collection (Unsplash Hard-Code)
-        // Add author title underneath (Unsplash Hard-Code)
-        // Add randomized number of likes/views 
-        // Add onClick event that when collection is clicked navigates to collection show page
-        <>
-        <h1>Top Collections</h1>
-            {collections.map(collection => 
-                <div>
-                    <img src={collection.fields.FeaturedImage} alt="Banner"></img>
-                    <Link to={`/show-collection/${collection.id}`}>{collection.fields.CollectionName} ({collection.fields.Username})</Link>
-                </div>)}
-        </>
-    )
+      );
+
+      updateCollection(data.data.records);
+    };
+    collectionApiCall();
+  }, []);
+
+  return (
+    <>
+      <h1>Top Collections</h1>
+      {collections.map((collection) => (
+        <div className="top-collections-div">
+          <img className="top-collections-images-home" src={collection.fields.FeaturedImage} alt="Banner"></img>
+          <Link to={`/show-collection/${collection.id}`} className="collections-text">
+            {collection.fields.CollectionName} ({collection.fields.Username})
+          </Link>
+        </div>
+      ))}
+    </>
+  );
 }
 
-export default Collection
+export default Collection;

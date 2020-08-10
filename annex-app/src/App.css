@@ -1,38 +1,209 @@
-.App {
+
+@font-face {
+  font-family: 'Belleza', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: "https://fonts.googleapis.com/css2?family=Belleza&display=swap";
+}
+
+body {
+  font-family: 'Belleza', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-bar {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: black;
+  height: 5vh;
+  /* position: fixed */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-text{
+  text-decoration: none;
+  color: white;
+  padding-top: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.feature-collection-div{
+  display: flex;
+  width: 100vw;
+  /* margin-top: 20%; */
+  margin-bottom: 15px
+}
+
+.feature-image{
+  width: 100vw;
+  height: 75vw;
+  object-fit: cover;
+}
+
+.top-collections-div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.top-collections-images-home{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  padding: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.collections-text {
+  position: absolute;
+  text-decoration: none;
+  color: gray;
+  text-align: center;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.top-users-div{
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
 }
+
+.top-users-images-home{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  padding: 5%;
+}
+
+.top-users-text-home{
+  position: absolute;
+  text-decoration: none;
+  color: gray;
+  text-align: left;
+}
+
+.create-collections-div{
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 1%;
+}
+
+.collections-username-input{
+  width: 70%;
+  text-align: left;
+  margin: 2%;
+}
+
+.collections-name-input{
+  width: 56%;
+  text-align: left;
+  margin: 2%;
+}
+
+.collections-caption-input{
+  width: 84%;
+  text-align: left;
+  padding: 5%;
+  margin: 2%;
+}
+
+.collections-url-input{
+  width: 53%;
+  text-align: left;
+  margin: 2%;
+}
+
+.collections-button{
+  text-align: center;
+}
+
+.show-collections-div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.show-collection-images{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  padding: 5%;
+}
+
+.create-users-div{
+  text-align: left;
+  margin-top: 5%;
+  margin-left: 1%;
+}
+
+.users-bio-input{
+  width: 84%;
+  text-align: left;
+  padding: 5%;
+  margin: 5px;
+}
+
+.users-location-input{
+  width: 74%;
+  text-align: left;
+  margin: 5px;
+}
+
+.users-username-input{
+  width: 80%;
+  text-align: left;
+  margin: 5px;
+}
+
+.users-profile-input{
+  width: 64%;
+  text-align: left;
+  margin: 5px;
+}
+
+.users-url-input{
+  width: 48%;
+  text-align: left;
+  margin: 5px;
+}
+
+.users-button{
+  text-align: center;
+}
+
+.show-users-div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 5%;
+}
+
+.show-users-images{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  padding: 5%;
+} 
