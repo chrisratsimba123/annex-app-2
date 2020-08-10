@@ -107,7 +107,8 @@ function CreateCollection() {
         placeholder="Enter Image URL"
         onChange={(e) => updateSixthPic(e.target.value)}
       />
-      <button className="collections-button"
+      <button
+        className="collections-button"
         onClick={() =>
           createCollection(
             username,

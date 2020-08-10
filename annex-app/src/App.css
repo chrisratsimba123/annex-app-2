@@ -1,13 +1,12 @@
-
 @font-face {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   font-style: normal;
   font-weight: 400;
   src: "https://fonts.googleapis.com/css2?family=Belleza&display=swap";
 }
 
 body {
-  font-family: 'Belleza', sans-serif;
+  font-family: "Belleza", sans-serif;
   text-align: center;
 }
 
@@ -20,7 +19,7 @@ body {
   /* position: fixed */
 }
 
-.nav-text{
+.nav-text {
   text-decoration: none;
   color: white;
   padding-top: 12px;
@@ -28,27 +27,27 @@ body {
   padding-right: 10px;
 }
 
-.feature-collection-div{
+.feature-collection-div {
   display: flex;
   width: 100vw;
   /* margin-top: 20%; */
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
-.feature-image{
+.feature-image {
   width: 100vw;
   height: 75vw;
   object-fit: cover;
 }
 
-.top-collections-div{
+.top-collections-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100vw;
 }
 
-.top-collections-images-home{
+.top-collections-images-home {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -65,16 +64,15 @@ body {
   text-decoration: none;
   color: gray;
   text-align: center;
-  
 }
 
-.top-users-div{
+.top-users-div {
   display: flex;
   justify-content: space-around;
   width: 100vw;
 }
 
-.top-users-images-home{
+.top-users-images-home {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -86,56 +84,56 @@ body {
   padding: 5%;
 }
 
-.top-users-text-home{
+.top-users-text-home {
   position: absolute;
   text-decoration: none;
   color: gray;
   text-align: left;
 }
 
-.create-collections-div{
+.create-collections-div {
   text-align: left;
   margin-top: 5%;
   margin-left: 1%;
 }
 
-.collections-username-input{
+.collections-username-input {
   width: 70%;
   text-align: left;
   margin: 2%;
 }
 
-.collections-name-input{
+.collections-name-input {
   width: 56%;
   text-align: left;
   margin: 2%;
 }
 
-.collections-caption-input{
+.collections-caption-input {
   width: 84%;
   text-align: left;
   padding: 5%;
   margin: 2%;
 }
 
-.collections-url-input{
+.collections-url-input {
   width: 53%;
   text-align: left;
   margin: 2%;
 }
 
-.collections-button{
+.collections-button {
   text-align: center;
 }
 
-.show-collections-div{
+.show-collections-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 100vw;
 }
 
-.show-collection-images{
+.show-collection-images {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -147,48 +145,48 @@ body {
   padding: 5%;
 }
 
-.create-users-div{
+.create-users-div {
   text-align: left;
   margin-top: 5%;
   margin-left: 1%;
 }
 
-.users-bio-input{
+.users-bio-input {
   width: 84%;
   text-align: left;
   padding: 5%;
   margin: 5px;
 }
 
-.users-location-input{
+.users-location-input {
   width: 74%;
   text-align: left;
   margin: 5px;
 }
 
-.users-username-input{
+.users-username-input {
   width: 80%;
   text-align: left;
   margin: 5px;
 }
 
-.users-profile-input{
+.users-profile-input {
   width: 64%;
   text-align: left;
   margin: 5px;
 }
 
-.users-url-input{
+.users-url-input {
   width: 48%;
   text-align: left;
   margin: 5px;
 }
 
-.users-button{
+.users-button {
   text-align: center;
 }
 
-.show-users-div{
+.show-users-div {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -196,7 +194,7 @@ body {
   margin-top: 5%;
 }
 
-.show-users-images{
+.show-users-images {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -206,4 +204,4 @@ body {
   height: 40vw;
   object-fit: cover;
   padding: 5%;
-} 
+}

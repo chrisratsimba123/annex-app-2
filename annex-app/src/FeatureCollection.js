@@ -7,7 +7,7 @@ function FeatureCollection() {
 
   useEffect(() => {
     const featureApiCall = async () => {
-      const data = await axios(
+      const res = await axios(
         "https://api.airtable.com/v0/appI7kTD5SxyjumuA/Table%201",
         {
           headers: {
@@ -16,7 +16,7 @@ function FeatureCollection() {
         }
       );
 
-      updateFeatureCollection(data.data.records);
+      updateFeatureCollection(res.data.records);
       setInterval(() => {
         if (imageIndex + 1 === featureCollection.length) {
           updateImageIndex(0);
@@ -33,7 +33,8 @@ function FeatureCollection() {
       <h1>Feature Collection</h1>
       <div className="feature-collection-div">
         {featureCollection.length > 0 && (
-          <img className="feature-image"
+          <img
+            className="feature-image"
             src={featureCollection[imageIndex].fields.FeaturedImage}
             alt="Top Collections"
           ></img>

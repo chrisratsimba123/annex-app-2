@@ -88,7 +88,8 @@ function CreateUser() {
         placeholder="Enter Image URL"
         onChange={(e) => updateThirdPic(e.target.value)}
       />
-      <button className="users-button"
+      <button
+        className="users-button"
         onClick={() =>
           createUser(
             profilePic,

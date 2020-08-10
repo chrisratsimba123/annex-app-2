@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 function User() {
@@ -26,8 +26,14 @@ function User() {
       <h1>Top Users</h1>
       {users.map((user) => (
         <div className="top-users-div">
-          <img className="top-users-images-home" src={user.fields.Artwork1} alt="Profile-Pic"></img>
-          <Link to={`/show-user/${user.id}`} className="top-users-text-home">{user.fields.Name}</Link>
+          <img
+            className="top-users-images-home"
+            src={user.fields.Artwork1}
+            alt="Profile-Pic"
+          ></img>
+          <Link to={`/show-user/${user.id}`} className="top-users-text-home">
+            {user.fields.Name}
+          </Link>
         </div>
       ))}
     </>

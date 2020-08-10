@@ -26,11 +26,26 @@ function ShowUser() {
       {user && (
         <div className="show-users-div">
           <h1>{user.fields.Name}</h1>
-          <img src={user.fields.MediumProPic} alt="Medium Sized Profile Pic"></img>
+          <img
+            src={user.fields.MediumProPic}
+            alt="Medium Sized Profile Pic"
+          ></img>
           <h2>{user.fields.Location}</h2>
-          <img className="show-users-images" src={user.fields.Artwork1} alt="Artwork 1"></img>
-          <img className="show-users-images" src={user.fields.Artwork2} alt="Artwork 2"></img>
-          <img className="show-users-images" src={user.fields.Artwork3} alt="Artwork 3"></img>
+          <img
+            className="show-users-images"
+            src={user.fields.Artwork1}
+            alt="Artwork 1"
+          ></img>
+          <img
+            className="show-users-images"
+            src={user.fields.Artwork2}
+            alt="Artwork 2"
+          ></img>
+          <img
+            className="show-users-images"
+            src={user.fields.Artwork3}
+            alt="Artwork 3"
+          ></img>
         </div>
       )}
     </>
